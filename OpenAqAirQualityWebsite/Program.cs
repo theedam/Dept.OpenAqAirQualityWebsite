@@ -3,8 +3,6 @@ using OpenAqAirQuality.Common.Constants;
 using Polly;
 using Polly.Extensions.Http;
 using OpenAqAirQuality.Services.OpenAq;
-using Microsoft.AspNetCore.HttpOverrides;
-using Microsoft.AspNetCore.CookiePolicy;
 
 var builder = WebApplication.CreateBuilder(args);
 
