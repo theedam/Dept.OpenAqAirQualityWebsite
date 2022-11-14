@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 //builder.Services.AddApplicationInsightsTelemetry();
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddTransient<IOpenAqService, OpenAqService>();
+builder.Services.AddScoped<IOpenAqService, OpenAqService>();
 
 AddOpenAqClient(builder);
 
