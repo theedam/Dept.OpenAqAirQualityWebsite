@@ -13,6 +13,7 @@ namespace OpenAqAirQuality.Website.Controllers
             _openAqService = openAqService;
         }
 
+        //TODO: Implement paging properly adding a proper paging control to front end
         public async Task<IActionResult> Index(
             int pageSize = OpenAqConstants.DefaultPageSize,
             int page = OpenAqConstants.DefaultPage,

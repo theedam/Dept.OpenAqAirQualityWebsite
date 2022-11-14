@@ -8,7 +8,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-//builder.Services.AddApplicationInsightsTelemetry(); - Have installed required Nuget to install, if production code would enable app insights
+//TODO: In production system setup and configure application insights in the appsettings
+//builder.Services.AddApplicationInsightsTelemetry();
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddTransient<IOpenAqService, OpenAqService>();
@@ -55,6 +56,7 @@ void AddOpenAqClient(WebApplicationBuilder webApplicationBuilder)
         .OrResult(r =>
             {
                 var statusCode = (int)r.StatusCode;
+                //TODO: Extend this to look for the retry after value 
                 return statusCode == (int)HttpStatusCode.TooManyRequests;
             } 
         )

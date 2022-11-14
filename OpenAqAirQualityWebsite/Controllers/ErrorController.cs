@@ -25,6 +25,7 @@ namespace OpenAqAirQuality.Website.Controllers
                 ? exceptionHandlerPathFeature.Error 
                 : new Exception("An unknown Error occurred");
 
+            //TODO: Setup logging to go to central logging system such as elastic search
             _logger.LogError(siteException, "An error occurred with requestId: {RequestId}", requestId);
 
             var model = new ErrorViewModel
