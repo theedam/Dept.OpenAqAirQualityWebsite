@@ -12,6 +12,7 @@ namespace OpenAqAirQuality.Website.Controllers
             _openAqService = openAqService;
         }
 
+        //TODO: Change the routing to not use query string but be more explicit location/{id}
         public async Task<IActionResult> Index(
             int? id)
         {

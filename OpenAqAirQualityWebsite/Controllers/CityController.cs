@@ -13,6 +13,8 @@ namespace OpenAqAirQuality.Website.Controllers
             _openAqService = openAqService;
         }
 
+        //TODO: Implement paging properly adding a proper paging control to front end
+        //TODO: Change the routing to not use query string but be more explicit city/{id}
         public async Task<IActionResult> Index(
             string id,
             int pageSize = OpenAqConstants.DefaultPageSize,
