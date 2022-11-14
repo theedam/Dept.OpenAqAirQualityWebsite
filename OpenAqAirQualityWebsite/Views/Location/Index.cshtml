@@ -1,0 +1,97 @@
+﻿@model LocationViewModel
+
+<div class="text-center">
+    @if (Model.LatestMeasurement != null)
+    {
+        <h1>Latest Measurements for Location: @Model.LatestMeasurement.Location</h1>
+
+        @if (Model.LatestMeasurement?.Measurements != null && Model.LatestMeasurement.Measurements.Any())
+        {
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Parameter</th>
+                    <th scope="col">Value</th>
+                    <th scope="col">LastUpdated</th>
+                    <th scope="col">Unit</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var measurements in Model.LatestMeasurement?.Measurements)
+                {
+                    <tr>
+                        <td>@measurements.Parameter</td>
+                        <td>@measurements.Value</td>
+                        <td>@measurements.LastUpdated.ToString(DateFormats.Display)</td>
+                        <td>@measurements.Unit</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No Measurements Found</p>
+        }
+    }
+    else
+    {
+        <h1>No measurements Found</h1>
+    }
+    
+    @if (Model.Location != null)
+    {
+        <h2>Location Details: @Model.Location.Name</h2>
+        
+        @if (Model.Location.Parameters != null && Model.Location.Parameters.Any())
+        {
+            <h3>Parameters</h3>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Unit</th>
+                    <th scope="col">Count</th>
+                    <th scope="col">Average</th>
+                    <th scope="col">Parameter Name</th>
+                    <th scope="col">LastUpdated</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var parameter in Model.Location.Parameters)
+                {
+                    <tr>
+                        <td>@parameter.Unit</td>
+                        <td>@parameter.Count</td>
+                        <td>@parameter.Average</td>
+                        <td>@parameter.DisplayName</td>
+                        <td>@parameter.LastUpdated.ToString(DateFormats.Display)</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+        @if (Model.Location.Sources != null && Model.Location.Sources.Any())
+        {
+            <h3>Sources</h3>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Url</th>
+                        <th scope="col">Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var source in Model.Location.Sources)
+                    {
+                        <tr>
+                            <td>@source.Url</td>
+                            <td>@source.Name</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    }
+</div>

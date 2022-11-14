@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAqAirQuality.Website", "OpenAqAirQualityWebsite\OpenAqAirQuality.Website.csproj", "{52DF1148-C525-4809-8AB7-3FB1EDAD25A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAqAirQuality.Services", "OpenAqAirQuality.Services\OpenAqAirQuality.Services.csproj", "{FA490B0E-4E18-4D3D-AE4F-5D62C000817C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAqAirQuality.Common", "OpenAqAirQuality.Common\OpenAqAirQuality.Common.csproj", "{EEC93DA4-4124-447E-82C9-85FB72D5B150}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9C8E94AE-6325-4637-9136-842A5274D732}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAqAirQuality.Tests.Unit", "OpenAqAirQuality.Tests.Unit\OpenAqAirQuality.Tests.Unit.csproj", "{0D72AD87-AF11-43D2-8D8C-6C248B66F6DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenAqAirQuality.Models", "OpenAqAirQuality.Models\OpenAqAirQuality.Models.csproj", "{83084E61-11CA-4650-943C-B66BE238C757}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52DF1148-C525-4809-8AB7-3FB1EDAD25A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52DF1148-C525-4809-8AB7-3FB1EDAD25A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52DF1148-C525-4809-8AB7-3FB1EDAD25A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52DF1148-C525-4809-8AB7-3FB1EDAD25A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA490B0E-4E18-4D3D-AE4F-5D62C000817C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA490B0E-4E18-4D3D-AE4F-5D62C000817C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA490B0E-4E18-4D3D-AE4F-5D62C000817C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA490B0E-4E18-4D3D-AE4F-5D62C000817C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEC93DA4-4124-447E-82C9-85FB72D5B150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEC93DA4-4124-447E-82C9-85FB72D5B150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEC93DA4-4124-447E-82C9-85FB72D5B150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEC93DA4-4124-447E-82C9-85FB72D5B150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D72AD87-AF11-43D2-8D8C-6C248B66F6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D72AD87-AF11-43D2-8D8C-6C248B66F6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D72AD87-AF11-43D2-8D8C-6C248B66F6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D72AD87-AF11-43D2-8D8C-6C248B66F6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83084E61-11CA-4650-943C-B66BE238C757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83084E61-11CA-4650-943C-B66BE238C757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83084E61-11CA-4650-943C-B66BE238C757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83084E61-11CA-4650-943C-B66BE238C757}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D72AD87-AF11-43D2-8D8C-6C248B66F6DC} = {9C8E94AE-6325-4637-9136-842A5274D732}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B10898C8-A5A0-44CE-939D-4552A774DEC7}
+	EndGlobalSection
+EndGlobal

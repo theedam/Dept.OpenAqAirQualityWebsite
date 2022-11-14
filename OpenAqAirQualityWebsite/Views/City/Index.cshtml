@@ -1,0 +1,42 @@
+﻿@model CityViewModel
+
+
+<div class="text-center">
+    <h1>Please select a location</h1>
+
+    @if (Model.Locations?.LocationItems != null && Model.Locations.LocationItems.Any())
+    {
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Mobile?</th>
+                    <th scope="col">Analysis?</th>
+                    <th scope="col">Sensor Type</th>
+                    <th scope="col">Last Updated</th>
+                    <th scope="col">Measurements</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var location in Model.Locations.LocationItems)
+                {
+                        <tr>
+                            <td>
+                                <a href="/location?id=@location.Id">@location.Name</a>
+                            </td>
+                            <td>@location.IsMobile.ToYesNoString()</td>
+                            <td>@location.IsAnalysis.ToYesNoString()</td>
+                            <td>@location.SensorType</td>
+                            <td>@location.LastUpdated.ToString(DateFormats.Display)</td>
+                            <td>@location.Measurements</td>
+                        </tr>
+                }
+                </tbody>
+            </table>
+    }
+    else
+    {
+            <p>No Locations Found</p>
+    }
+
+</div>
